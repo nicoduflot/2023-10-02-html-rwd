@@ -90,3 +90,29 @@ body > header{
     background-color: var(--site-header-bg);
     color: var(--site-header-color);
 }
+
+
+
+/* 
+
+ Color Theme Swatches in Hex 
+.color-theme_goldorak-1-hex { color: #030A8C; }
+.color-theme_goldorak-2-hex { color: #021859; }
+.color-theme_goldorak-3-hex { color: #F2CB05; }
+.color-theme_goldorak-4-hex { color: #F29F05; }
+.color-theme_goldorak-5-hex { color: #BF0404; }
+
+ Color Theme Swatches in RGBA 
+.color-theme_goldorak-1-rgba { color: rgba(3, 10, 140, 1); }
+.color-theme_goldorak-2-rgba { color: rgba(2, 24, 89, 1); }
+.color-theme_goldorak-3-rgba { color: rgba(242, 203, 5, 1); }
+.color-theme_goldorak-4-rgba { color: rgba(242, 159, 5, 1); }
+.color-theme_goldorak-5-rgba { color: rgba(191, 4, 4, 1); }
+
+ Color Theme Swatches in HSLA 
+.color-theme_goldorak-1-hsla { color: hsla(236, 95, 28, 1); }
+.color-theme_goldorak-2-hsla { color: hsla(224, 95, 17, 1); }
+.color-theme_goldorak-3-hsla { color: hsla(50, 95, 48, 1); }
+.color-theme_goldorak-4-hsla { color: hsla(38, 95, 48, 1); }
+.color-theme_goldorak-5-hsla { color: hsla(0, 95, 38, 1); }
+*/
