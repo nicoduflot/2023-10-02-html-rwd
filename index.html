@@ -8,6 +8,7 @@
         <!--
             Dans le Head, c'est aussi là où l'on appelle les fichier CSS et aussi les fichiers de script JS
         -->
+        <link rel="stylesheet" href="./css/bootstrap-icons.css" />
     </head>
     <body>
         <header>
@@ -26,10 +27,78 @@
         </nav>
         <main>
             <section>
-                
+                <aside>
+                    <span>Table des matières</span>
+                    <ol type="I">
+                        <li><a href="#balises-contenu" title="Aller à la partie Balises de contenu texte">Les balises de contenu texte</a></li>
+                        <li><a href="#" title=""></a></li>
+                        <li><a href="#" title=""></a></li>
+                    </ol>
+                </aside>
+            </section>
+            <section>
+                <article>
+                    <header>
+                        <h2 id="balises-contenu">HTML : Les balises de contenu texte</h2>
+                    </header>
+                    <main>
+                        <!-- 
+                            une liste des caractères spéciaux en HTML
+                            https://www.leptidigital.fr/productivite/caracteres-speciaux-html-2-19297/
+                         -->
+                        <p>
+                            <b>Le texte doit toujours être compris dans des balises de contenu de type paragraphe</b>, comme des bloc de citation, du texte préformaté, etc.<br />
+                            La balise <code>&lt;br&gt;</code> permet de mettre un retour chariot au sein d'un paragraphe.
+                        </p>
+                        <hr />
+                        <p>
+                            <strong>la plupart des balises de contenu texte sont en affichage <code>display: block</code></strong>, c'est à dire qu'elles prennent tout l'espace disponible en largeur, et celles qui sont <code>display: inline</code> "entourent" le contenu texte, certaines peuvent par exemple servir a appliquer un CSS particulier à ce texte, comme les balises <code>&lt;code&gt;</code>, <code>&lt;span&gt;</code> ou avoir un fonctionnement comme la balise <code>&lt;a&gt;</code>.
+                        </p>
+                        <p>
+                            Attention, pour par exemple mettre du texte en gras ou en italique, il existe plusieurs balises comme <code>&lt;b&gt;</code>, <code>&lt;strong&gt;</code> pour le gras, <code>&lt;i&gt;</code> ou <code>&lt;em&gt;</code> pour l'italique.
+                        </p>
+                        <p>
+                            Si on utilise <code>&lt;strong&gt;</code>, on donne en plus d'une important visuelle au contenu une importance au niveau de la sémantique donc du référencement, alors que <code>&lt;b&gt;</code> ne donne qu'une importantce visuelle.
+                        </p>
+                        <p>
+                            La même chose pour la balise <code>&lt;em&gt;</code>, qui <em>donne en plus de l'italique, une emphase au texte</em>, alors que la balise <code>&lt;i&gt;</code> ne fait que mettre le texte en <i>italique</i>.
+                        </p>
+                        <p>
+                            Certains systèmes d'icônes fournis sur internet utilisent la balise i comme support pour afficher leurs icônes. 
+                            <i class="bi bi-card-text"></i>
+                        </p>
+                        <blockquote>
+                            <q>Tu quoque filis ?</q><br />
+                            <cite>Jules César</cite>
+                        </blockquote>
+                        <p>
+                            <q>I'm Batman</q>, <cite>Batman</cite>.
+                        </p>
+                        <pre>Lorem ipsum dolor sit 
+amet consectetur adipisicing elit. 
+Facere nemo consequatur, temporibus 
+quaerat quis tempore odit est incidunt 
+aperiam laborum recusandae 
+aspernatur explicabo non quas. 
+Vel autem earum assumenda incidunt.</pre>
+<pre>
+&lt;body&gt;
+    &lt;h1&gt;
+        Mon titre
+    &lt;/h1&gt;
+&lt;/body&gt;
+</pre>
+                    </main>
+                    <footer>
+                        <a href="./article.html"><button>Lire +</button></a>
+                    </footer>
+                </article>
             </section>
         </main>
         <footer>
+            <div>
+                &copy; DAWAN Oct - 2023
+            </div>
             <div>
                 <div>
                     <h4>Liens utiles</h4>
