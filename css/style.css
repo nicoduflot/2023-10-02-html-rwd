@@ -10,8 +10,83 @@ vw & vh     =>  vw : viewport width; vh : viewport height
 
 */
 
+/* il est possible d'importer des fichiers CSS sans une autre fichier CSS, cependant, il est obligatoire de faire ces imports en tout premier */
+
+@import url('./bootstrap-icons.css');
+
+/* les déclarations dans le :root */
 :root{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1rem;
     line-height: 1.7rem;
+    /* 
+    il est possible en CSS de déclarer des variables, qui peuvent contenir :  
+    - des couleurs CSS
+    - des tailles en px, rem, vh, etc
+    */
+    --site-header-bg: #333333;
+    --site-header-color: white;
+}
+
+/* déclarations générales */
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+pre{
+    text-wrap: wrap;
+}
+
+/* déclarations des classes */
+
+.rouge-gras{
+    color: #9c0000;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
+.ex-before::before{
+    font-family: 'bootstrap-icons';
+    content: '\f430';
+}
+
+.ex-before::after{
+    font-family: 'bootstrap-icons';
+    content: '\f430';
+}
+
+
+.content-width,
+.border-width{
+    width: 200px;
+    padding: 10px;
+    border: 1px solid var(--site-header-bg);
+    margin: 0.5rem;
+}
+
+.content-width{
+    box-sizing: content-box;
+}
+
+.deux-em{
+    font-size: 2em;
+    margin: 1rem;
+}
+
+.deux-rem{
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+/* déclarations de structure */
+
+body{
+    margin: 0;
+}
+
+body > header{
+    background-color: var(--site-header-bg);
+    color: var(--site-header-color);
 }
