@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formation HTML5 - CSS3 - RWD</title>
+    <meta name="description" content="Le site - projet pour la formation HTML5 - CSS3 - RWD semaine 40 - Oct - 2023" />
+    <!--
+            Dans le Head, c'est aussi là où l'on appelle les fichier CSS et aussi les fichiers de script JS
+        -->
+    <link rel="stylesheet" href="./css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="site-title">Formation HTML5 - CSS3 - RWD</div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="./" target="_self" title="Lien vers l'accueil du site">Accueil</a>
+            </li>
+            <li>
+                <a href="./article.html" target="_self" title="Lien vers la page article">Article</a>
+            </li>
+            <li>
+                <a href="./contact.html" target="_self" title="Lien vers le formulaire de contact">Contact</a>
+            </li>
+            <li><a href="./media.html" target="_self" title="Lien vers la page media">Media</a></li>
+            <li>
+                <a href="./animation.html" target="_self" title="Lien vers les animation en CSS">Animation</a>
+            </li>
+            <li>
+                <a href="./trucs.html" target="_self" title="Lien vers la page des trucs CSS utiles">Trucs CSS</a>
+            </li>
+            <li>
+                <a href="./bootstrap.html" target="_self" title="Lien vers une page utilisant Bootstrap">Bootstrap</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <article>
+                <header>
+                    <h1>Les formulaires</h1>
+                </header>
+                <main>
+                    <p>
+                        Les formulaires servent a récupérer des informations pour traitement, par exemple, un serveur
+                        php qui pourra les enregistrer en fichier, en bdd, ou les envoyer par mail.
+                    </p>
+                    <p>
+                        Un formulaire se déclare à l'aide de la balise <code class="balise">form</code>. Il possède des
+                        attributs,
+                        dont les plus courants et importants sont : method & action
+                    </p>
+                    <h3>method</h3>
+                    <p>
+                        C'est la méthode d'envoi des informations du formulaire, il en existe deux :
+                    </p>
+                    <ul>
+                        <li>GET : les données sont envoyées associées à des
+                            noms de variables dans l'url de la page de traitement</li>
+                        <li>POST : Les données sont transmises en variables dans
+                            l'entête HTTP.
+                        </li>
+                    </ul>
+                    <p>
+                        Si la méthode n'est pas indiquée dans le formulaire,
+                        c'est GET qui sera utilisé par défaut
+                    </p>
+                    <h3>Action</h3>
+                    <p>
+                        Indique l'url de la page de traitement des données envoyées par le formulaire.
+                        Si action n'est pas précisé, le formulaire considère que c'est la page où il
+                        se trouve qui sera la page de traitement.
+                    </p>
+                    <form method="get" action="./contact.html">
+                        <fieldset>
+                            <legend>
+                                Informations de contact
+                            </legend>
+                            <p>
+                                <label for="nom">Nom : </label>
+                                <input type="text" name="nom" id="nom" aria-describedby="info-nom" autofocus placeholder="Votre nom" required />
+                            </p>
+                            <div class="info-form" id="info-nom">
+                                Ce champ doit contenir votre nom de famille d'usage, il est obligatoire.
+                            </div>
+                            <p>
+                                <label for="prenom">Prénom : </label>
+                                <input type="text" name="prenom" id="prenom" aria-describedby="info-prenom" placeholder="Votre prénom" />
+                            </p>
+                            <div class="info-form" id="info-prenom">
+                                Ce champ doit contenir votre prénom, il n'est pas obligatoire.
+                            </div>
+                            <p>
+                                <label for="email">E-mail : </label>
+                                <input type="text" name="email" id="email" aria-describedby="info-email" placeholder="Votre email" required />
+                            </p>
+                            <div class="info-form" id="info-prenom">
+                                Ce champ doit contenir votre email, il est obligatoire.
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>
+                                Votre demande
+                            </legend>
+                            <p>
+                                <label for="type-demande">Type de la demande : </label>
+                                <select name="type-demande" id="type-demande" aria-describedby="info-type-demande">
+                                    <option value="" selected>Choisir un type de demande</option>
+                                    <optgroup label="Options unitaires">
+                                        <option value="1">Opt 1</option>
+                                        <option value="2">Opt 2</option>
+                                        <option value="3">Opt 3</option>
+                                        <option value="4">Opt 4</option>
+                                        <option value="5">Opt 5</option>
+                                    </optgroup>
+                                    <optgroup label="Toutes les options sauf :">
+                                        <option value="6">Tout sans l'option 1</option>
+                                        <option value="7">Tout sans l'option 2</option>
+                                        <option value="8">Tout sans l'option 3</option>
+                                    </optgroup>
+                                </select>
+                            </p>
+                            <div class="info-form" id="info-type-demande">
+                                Vous devez sélectionner un type de demande.
+                            </div>
+                            <p>
+                                <label for="contact">Type de contact</label>
+                                <select name="contact" id="contact" multiple>
+                                    <option value="" selected>Choisir un ou plusieurs types de diffusion</option>
+                                    <option value="diff-email">email</option>
+                                    <option value="diff-telephone">telephone</option>
+                                    <option value="diff-radio">radio</option>
+                                    <option value="diff-tele">tele</option>
+                                </select>
+                            </p>
+                        </fieldset>
+
+                        <button type="submit">Soummettre le formulaire</button>
+                        <button type="reset">Vider les données du formulaire</button>
+                    </form>
+                </main>
+                <footer>
+
+                </footer>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div>
+            &copy; DAWAN Oct - 2023
+        </div>
+        <div>
+            <div>
+                <h4>Liens utiles</h4>
+                <ul>
+                    <li><a href="./cgu.html" title="Lien vers les conditions générales d'utilisation">CGU</a></li>
+                    <li><a href="#" title="Sitemap du site">Sitemap</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Partenaires</h4>
+                <ul>
+                    <li><a href="#" title="lien 01">lien 01</a></li>
+                    <li><a href="#" title="lien 02">lien 02</a></li>
+                    <li><a href="#" title="lien 03">lien 03</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
