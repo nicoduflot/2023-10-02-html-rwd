@@ -286,6 +286,8 @@ body{
 body > header{
     background-color: var(--site-header-bg);
     color: var(--site-header-color);
+    padding: 1rem;
+    text-align: center;
 }
 
 body > nav{
