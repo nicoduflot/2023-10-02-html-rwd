@@ -24,8 +24,16 @@ vw & vh     =>  vw : viewport width; vh : viewport height
     - des couleurs CSS
     - des tailles en px, rem, vh, etc
     */
-    --site-header-bg: #333333;
-    --site-header-color: white;
+
+    --site-bg-color: #ffffff;
+    --site-color: #333333;
+    --site-links: #DE3400;
+    --site-links-alt: var(--site-color);
+    --midtone-grey: #625D73;
+    --site-header-bg: var(--site-color);
+    --site-header-color: var(--site-bg-color);
+    --site-nav-bg-color: var(--site-color);
+    --site-nav-color: var(--site-bg-color);
 }
 
 /* déclarations générales */
@@ -34,12 +42,51 @@ vw & vh     =>  vw : viewport width; vh : viewport height
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, 
+h2, 
+h3, h4, h5, h6{
     margin: 0;
+}
+
+ul, ol, dd{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 pre{
     text-wrap: wrap;
+}
+
+a, 
+a:visited{
+    text-decoration: none;
+    color: var(--site-links);
+}
+
+a:hover, 
+a:focus{
+    color: var(--site-links-alt);
+}
+
+article, aside{
+    padding: 1rem 0.5rem;
+    /* padding: 1rem 0.5rem 1rem 0.5rem; */
+    /*
+    padding-top: 1rem;
+    padding-right: 0.5rem;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    */
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table td{
+    border: 1px solid var(--site-color);
+    padding: 0.5rem;
 }
 
 /* déclarations des classes */
@@ -89,10 +136,22 @@ pre{
     margin: 1rem;
 }
 
+.balise{
+    font-family: monospace;
+}
+
+.balise::before{
+    content: "<";
+}
+.balise::after{
+    content: ">";
+}
+
 /* déclarations de structure */
 
 body{
     margin: 0;
+    background-color: var(--site-bg-color);
 }
 
 body > header{
@@ -100,30 +159,41 @@ body > header{
     color: var(--site-header-color);
 }
 
+body > nav{
+    background-color: var(--site-nav-bg-color);
+    color: var(--site-nav-color);
+    line-height: 2rem;
+}
+
+body > nav li:not(body > nav li:last-child){
+/* 
+tous les éléments li contenu dans la liste de la navigation principale vont avoir 
+une bordure en bas sauf le dernier élément li de la liste de la navigation principale
+*/
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+body > nav a,
+body > nav a:visited{
+    color: inherit;
+    padding: 0 0.5rem;
+    display: block;
+    &:hover, &:focus{
+        background-color: var(--site-nav-color);
+        color: var(--site-nav-bg-color);
+    }
+}
+
+/* &:hover, &:focus remplace la déclaration suivante : */
+/*
+body > nav a:hover,
+body > nav a:focus{
+    background-color: var(--site-nav-color);
+    color: var(--site-nav-bg-color);
+}
+*/
+
 article h1{
     font-size: 1.5rem;
 }
-
-/* 
-
- Color Theme Swatches in Hex 
-.color-theme_goldorak-1-hex { color: #030A8C; }
-.color-theme_goldorak-2-hex { color: #021859; }
-.color-theme_goldorak-3-hex { color: #F2CB05; }
-.color-theme_goldorak-4-hex { color: #F29F05; }
-.color-theme_goldorak-5-hex { color: #BF0404; }
-
- Color Theme Swatches in RGBA 
-.color-theme_goldorak-1-rgba { color: rgba(3, 10, 140, 1); }
-.color-theme_goldorak-2-rgba { color: rgba(2, 24, 89, 1); }
-.color-theme_goldorak-3-rgba { color: rgba(242, 203, 5, 1); }
-.color-theme_goldorak-4-rgba { color: rgba(242, 159, 5, 1); }
-.color-theme_goldorak-5-rgba { color: rgba(191, 4, 4, 1); }
-
- Color Theme Swatches in HSLA 
-.color-theme_goldorak-1-hsla { color: hsla(236, 95, 28, 1); }
-.color-theme_goldorak-2-hsla { color: hsla(224, 95, 17, 1); }
-.color-theme_goldorak-3-hsla { color: hsla(50, 95, 48, 1); }
-.color-theme_goldorak-4-hsla { color: hsla(38, 95, 48, 1); }
-.color-theme_goldorak-5-hsla { color: hsla(0, 95, 38, 1); }
-*/

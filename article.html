@@ -36,10 +36,138 @@
             <section>
                 <article>
                     <header>
-                        <h1>Les media en HTML</h1>
+                        <h1>Les tableaux HTML</h1>
                     </header>
                     <main>
-                        
+                        <h2>La balise <code class="balise">table</code></h2>
+                        <p>
+                            Un tableau est composé de plusieurs balises encapsulées.
+                        </p>
+                        <p>
+                            <code class="balise">table</code> est la balise conteneur du tableau, à l'intérieur, on y ajoute des balises, certaines optionnelles, afin de créer les lignes et les colonnes du tableau
+                        </p>
+                        <p>
+                            Une ligne de tableau est créée avec la balise <code class="balise">tr</code> (table row).
+                        </p>
+                        <p>
+                            un ligne va contenir des cellules représentant les colonnes avec les balises <code class="balise">td</code> (table division)
+                        </p>
+                        <p>
+                            Les cellules d'un tableau ne sont que des division de l'élément qui les contiennent (tr). c'est à dire que si on veut des cellules fusionnées, on ne fusionne pas vraiment deux division, mais on élargi (sur les colonne) ou on agrandit (sur les lignes) l'espace que prend une cellule.
+                        </p>
+                        <p>
+                            Un tableau NE DOIT PAS ÊTRE inclu dans un paragraphe.
+                        </p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">1 - 1</td>
+                                    <td>1 - 2</td>
+                                    <td>1 - 3</td>
+                                    <td>1 - 4</td>
+                                    <!--
+                                        <td>1 - 5</td>                                        
+                                    -->
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">2 - 1</td>
+                                    <td>2 - 2</td>
+                                    <td>2 - 3</td>
+                                    <td>2 - 4</td>
+                                    <td>2 - 5</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" rowspan="2">3 - 1</td>
+                                    <td>3 - 2</td>
+                                    <td>3 - 3</td>
+                                    <!-- 
+                                        <td>3 - 4</td>
+                                        <td>3 - 5</td>
+                                    -->
+                                </tr>
+                                <tr>
+                                    <td>4 - 1</td>
+                                    <td>4 - 2</td>
+                                    <td>4 - 3</td>
+                                    <!-- 
+                                        <td>4 - 4</td>
+                                        <td>4 - 5</td>
+                                    -->
+                                </tr>
+                                <tr>
+                                    <td>5 - 1</td>
+                                    <td>5 - 2</td>
+                                    <td>5 - 3</td>
+                                    <td>5 - 4</td>
+                                    <td>5 - 5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>Les balise "optionnelles"</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </tfoot>
+                        </table>
                     </main>
                     <footer>
                         
