@@ -28,6 +28,10 @@ vw & vh     =>  vw : viewport width; vh : viewport height
     --site-bg-color: #ffffff;
     --site-color: #333333;
     --site-links: #DE3400;
+    --site-third-color: #E08C07;
+    --site-third-color-75: rgba(224, 141, 7, 0.75);
+    --site-third-color-50: rgba(224, 141, 7, 0.5);
+    --site-third-color-25: rgba(224, 141, 7, 0.25);
     --site-links-alt: var(--site-color);
     --midtone-grey: #625D73;
     --site-header-bg: var(--site-color);
@@ -84,7 +88,8 @@ table{
     border-collapse: collapse;
 }
 
-table td{
+table td, 
+table th{
     border: 1px solid var(--site-color);
     padding: 0.5rem;
 }
@@ -145,6 +150,28 @@ table td{
 }
 .balise::after{
     content: ">";
+}
+
+.overflow-x{
+    overflow-x: auto;
+}
+
+.t-dbl tbody tr:nth-of-type(odd){
+    background-color: var(--site-third-color-25);
+}
+
+.t-dbl th{
+    background-color: var(--site-color);
+    color: var(--site-bg-color);
+}
+
+.t-dbl th:first-child{
+    text-align: left;
+}
+
+.t-dbl td{
+    text-align: right;
+    text-wrap:nowrap;
 }
 
 /* déclarations de structure */
