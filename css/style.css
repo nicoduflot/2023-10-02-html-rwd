@@ -141,6 +141,55 @@ table th{
     padding: 0.5rem;
 }
 
+form fieldset{
+    border: 1px solid var(--site-color);
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+form legend{
+    line-height: 2rem;
+    border: 1px solid var(--site-color);
+    border-radius: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: 0 2px 3px var(--site-color);
+}
+
+form input[type="text"],
+form select{
+    height: 1.7rem;
+    border: 1px solid var(--site-color);
+    border-radius: 3px;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+}
+
+form button[type="submit"], form button[type="reset"]{
+    border: 1px solid var(--site-color);
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    
+}
+form button[type="submit"]{
+    color: var(--site-bg-color);
+    background-color: var(--site-links);
+    &:hover, &:focus{
+        color: var(--site-links);
+        background-color: var(--site-bg-color);
+    }
+}
+
+form button[type="reset"]{
+    color: var(--site-color);
+    background-color: var(--site-third-color);
+    &:hover, &:focus{
+        color: var(--site-third-color);
+        background-color: var(--site-color);
+    }
+}
+
 /* déclarations des classes */
 
 .rouge-gras{
