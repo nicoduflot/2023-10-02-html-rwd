@@ -152,7 +152,8 @@ table th{
     content: ">";
 }
 
-.overflow-x{
+.table-display{
+    width: 100%;
     overflow-x: auto;
 }
 
@@ -167,6 +168,7 @@ table th{
 .t-dbl th{
     background-color: var(--site-color);
     color: var(--site-bg-color);
+    text-wrap: nowrap;
 }
 
 .t-dbl th:first-child{
