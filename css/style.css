@@ -160,6 +160,10 @@ table th{
     background-color: var(--site-third-color-25);
 }
 
+.t-dbl tbody td:nth-of-type(even){
+    background-color: var(--site-third-color-25);
+}
+
 .t-dbl th{
     background-color: var(--site-color);
     color: var(--site-bg-color);
