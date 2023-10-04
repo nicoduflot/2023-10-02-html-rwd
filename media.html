@@ -151,6 +151,83 @@
                     <a href="./article.html"><button>Lire +</button></a>
                 </footer>
             </article>
+            <article>
+                <header>
+                    <h2>La vidéo</h2>
+                </header>
+                <main>
+                    <h3>La vidéo hébergée en local</h3>
+                    <p>
+                        On  utilise la balise <code class="balise">video</code>, tout comme la balise audio, peut appeler le fichier directement ou proposer plusieurs formats dans des balises <code class="balise">source</code>
+                    </p>
+                    <video controls muted src="./media/video/Fallout-4-Launch-Trailer.mp4" preload="auto" poster="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg"></video>
+                    <h4>Plusieurs sources pour une vidéo</h4>
+                    <video controls>
+                        <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.mov" type="video/mov" />
+                        <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                        <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                    </video>
+                    <h3>
+                        La vidéo hébergée sur un site tier
+                    </h3>
+                    <p>
+                        Pour les media video hébergés sur des sites tiers, il s'agit en fait de pages contenants un lecteur et la ressource vidéo qui sont appelés dans une iframe.
+                    </p>
+                    <p>
+                        Grâce à ça, le lecteur peut être fait en HTML - CSS, les contrôles affichés sont généralement gérés avec du JavaScript
+                    </p>
+                    <h4>Youtube</h4>
+                    <p>
+                        Youtube impose un format dans l'iframe, il faudra modifier le CSS voir créer un élément enveloppeur afin de rendre l'iframe adaptative
+                    </p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/rrT6v5sOwJg?si=Y2hpSkf4PmUbk4re" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h4>
+                        Dailymotion
+                    </h4>
+                    <p>
+                        Daily motion apporte une solution adaptative inclue, avec un élément conteneur et une iframe appliquant du style CSS enbalise afin d'assurer l'adaptabilité à la largeur de l'affichage (device-width)
+                    </p>
+                    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                        <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/xr5ef" width="100%" height="100%" allowfullscreen title="Dailymotion Video Player" ></iframe>
+                    </div>
+                </main>
+                <footer>
+                    <a href="./article.html"><button>Lire +</button></a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>Les iframes</h2>
+                </header>
+                <main>
+                    <p>
+                        Les iframes sont des cadres dans lesquels on appelle d'autres pages. Il faut que ces pages soient
+                        autorisées par le serveur qui les héberge d'être partagées par un autre site.
+                    </p>
+                    <h3>Un fichier txt dans une iframe</h3>
+                    <ul>
+                        <li>
+                            <a href="./documents/fichier.txt" target="target-iframe">Ouvrir le fichier txt dans l'iframe</a>
+                        </li>
+                        <li>
+                            <a href="./media.html" target="target-iframe">Ouvrir la page media dans l'iframe</a>
+                        </li>
+                        <li>
+                            <a href="./documents/CRAM.pdf" target="target-iframe">Ouvrir un pdf dans l'iframe</a>
+                        </li>
+                        <li>
+                            <a href="./article.html" target="_self">Ouvrir la page article dans le cadre actuel </a>
+                        </li>
+                        <li>
+                            <a href="./article.html" target="_parent">Ouvrir la page article dans le cadre parent </a>
+                        </li>
+                        <li>
+                            <a href="./article.html" target="_top">Ouvrir la page article dans le cadre le plus haut (remplace la page actuelle du navigateur quelque soit la profondeur ou le nombre d'iframe encapsulées) </a>
+                        </li>
+                    </ul>
+                    <iframe width="100%" height="300px" src="./documents/fichier.txt" name="target-iframe"></iframe>
+                </main>
+            </article>
         </section>
     </main>
     <footer>
