@@ -159,12 +159,14 @@ form legend{
 }
 
 form input[type="text"],
+form input[type="email"],
 form select{
     height: 1.7rem;
     border: 1px solid var(--site-color);
     border-radius: 3px;
     font-size: 1rem;
     padding-left: 0.5rem;
+    width: 100%;
 }
 
 form button[type="submit"], form button[type="reset"]{
@@ -172,8 +174,9 @@ form button[type="submit"], form button[type="reset"]{
     border-radius: 3px;
     font-size: 1rem;
     padding: 0.5rem 1rem;
-    
+    margin: 0.5rem;
 }
+
 form button[type="submit"]{
     color: var(--site-bg-color);
     background-color: var(--site-links);
@@ -190,6 +193,20 @@ form button[type="reset"]{
         color: var(--site-third-color);
         background-color: var(--site-color);
     }
+}
+
+form p.form-action{
+    text-align: center;
+}
+
+.form-check-radio input[type="checkbox"],
+.form-check-radio input[type="radio"]
+{
+    width: 20%;
+}
+
+.form-check-radio label{
+    height: 1rem;
 }
 
 /* déclarations des classes */
@@ -278,6 +295,11 @@ form button[type="reset"]{
 .t-dbl td{
     text-align: right;
     text-wrap:nowrap;
+}
+
+.info-form::before{
+    font-family: 'bootstrap-icons';
+    content: '\f430';
 }
 
 /* déclarations de structure */

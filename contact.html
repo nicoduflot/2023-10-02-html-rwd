@@ -98,7 +98,7 @@
                             </div>
                             <p>
                                 <label for="email">E-mail : </label>
-                                <input type="text" name="email" id="email" aria-describedby="info-email" placeholder="Votre email" required />
+                                <input type="email" name="email" id="email" aria-describedby="info-email" placeholder="Votre email" required />
                             </p>
                             <div class="info-form" id="info-prenom">
                                 Ce champ doit contenir votre email, il est obligatoire.
@@ -144,7 +144,7 @@
                             <p>
                                 <label>Type de diffusion</label>
                             </p>
-                            <p>
+                            <p class="form-check-radio">
                                 <input type="checkbox" name="diff-email" id="diff-email" checked /> <label for="diff-email">Emailing</label> <br />
                                 <input type="checkbox" name="diff-telephone" id="diff-telephone" /> <label for="diff-telephone">Télé-opérateurs</label> <br />
                                 <input type="checkbox" name="diff-radio" id="diff-radio" /> <label for="diff-radio">Publicité radio</label> <br />
@@ -153,14 +153,15 @@
                             <p>
                                 <label>Vous représentez</label>
                             </p>
-                            <p>
+                            <p class="form-check-radio">
                                 <input type="radio" name="personne" id="morale" value="morale" checked> <label for="morale">Personne morale (entreprise)</label><br />
                                 <input type="radio" name="personne" id="physique" value="physique"> <label for="physique">Personne physique (particulier)</label>
                             </p>
                         </fieldset>
-
-                        <button type="submit">Soummettre le formulaire</button>
-                        <button type="reset">Vider les données du formulaire</button>
+                        <p class="form-action">
+                            <button type="submit">Soummettre le formulaire</button>
+                            <button type="reset">Vider les données du formulaire</button>
+                        </p>
                     </form>
                 </main>
                 <footer>
