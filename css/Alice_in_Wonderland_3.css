@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Alice_in_Wonderland_3';
+    src: url('fonts/Alice_in_Wonderland_3.eot');
+    src: url('fonts/Alice_in_Wonderland_3.eot') format('embedded-opentype'),
+         url('fonts/Alice_in_Wonderland_3.woff2') format('woff2'),
+         url('fonts/Alice_in_Wonderland_3.woff') format('woff'),
+         url('fonts/Alice_in_Wonderland_3.ttf') format('truetype'),
+         url('fonts/Alice_in_Wonderland_3.svg#Alice_in_Wonderland_3') format('svg');
+}

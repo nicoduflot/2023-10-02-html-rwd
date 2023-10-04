@@ -60,10 +60,12 @@ sélecteur CSS :
 /* il est possible d'importer des fichiers CSS sans une autre fichier CSS, cependant, il est obligatoire de faire ces imports en tout premier */
 
 @import url('./bootstrap-icons.css');
+@import url('./Alice_in_Wonderland_3.css');
+@import url('./roboto.css');
 
 /* les déclarations dans le :root */
 :root{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-size: 1.1rem;
     line-height: 1.7rem;
     /* 
@@ -213,6 +215,8 @@ form button[type="reset"]{
     margin: 0;
     font-size: 2rem;
     font-weight: bold;
+    font-family: 'Alice_in_Wonderland_3';
+    letter-spacing: 2px;
 }
 
 .content-width,
