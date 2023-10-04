@@ -97,7 +97,44 @@
                     </p>
                 </main>
                 <footer>
+                    <a href="./article.html"><button>Lire +</button></a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>L'audio</h2>
+                </header>
+                <main>
+                    <h3>L'audio hébergé sur le site</h3>
+                    <p>
+                        Il existe la balise <code class="balise">audio</code>, cette peut appeler directement le fichier alire mais peut aussi avoir en balise enfant une ou plusieurs balise <code class="balise">source</code>, qui permet de proposer plusieurs format audio, donc que le navigateur en utilise un qu'il sait lire et jouer.
+                    </p>
+                    <figure>
+                        <img src="./images/diablo_02.jpg" alt="Screenshot du jeu diablo, le personnage se trouve dans le village près de la fontaine, la musique associée est jouable via le lecteur sous l'image" />
+                        <audio id="diablo-town">
+                            <source src="./media/audio/diablo_town.ogg" type="audio/ogg" />
+                            <source src="./media/audio/diablo_town.mp3" type="audio/mp3" />
+                        </audio>
+                        <figcaption class="lecteur-audio">
+                            Lire le fichier audio<br />
+                            <button id="playAudio" data-target="#diablo-town"><i class="bi bi-play-circle"></i></button>
+                            <button id="pauseAudio" data-target="#diablo-town"><i class="bi bi-pause-circle"></i></button>
+                        </figcaption>
+                    </figure>
+                    <script>
+                        const play = document.querySelector('#playAudio');
+                        const pause = document.querySelector('#pauseAudio');
 
+                        play.addEventListener('click', function(){
+                            document.querySelector(play.dataset.target).play();
+                        });
+                        pause.addEventListener('click', function(){
+                            document.querySelector(play.dataset.target).pause();
+                        });
+                    </script>
+                </main>
+                <footer>
+                    <a href="./article.html"><button>Lire +</button></a>
                 </footer>
             </article>
         </section>

@@ -312,6 +312,16 @@ form p.form-action{
     margin: 0.5rem 0 0.5rem 0.5rem;
 }
 
+.lecteur-audio{
+    text-align: center;
+}
+
+.lecteur-audio > *{
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 /* déclarations de structure */
 
 body{
