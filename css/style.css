@@ -302,6 +302,16 @@ form p.form-action{
     content: '\f430';
 }
 
+.left{
+    float: left;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.right{
+    float: right;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
 /* déclarations de structure */
 
 body{
@@ -353,4 +363,9 @@ body > nav a:focus{
 
 article h1{
     font-size: 1.5rem;
+}
+
+article footer,
+.clear{
+    clear: both;
 }

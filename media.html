@@ -42,12 +42,47 @@
     </nav>
     <main>
         <section>
+            <h1>Les media</h1>
             <article>
                 <header>
-                    <h1>Les media</h1>
+                    <h2>Les images</h2>
                 </header>
                 <main>
-                    
+                    <p>
+                        Les images peuvent être affichées avec deux balises : <code class="balise">img</code> et <code class="balise">picture</code>.
+                    </p>
+                    <p>
+                        <code class="balise">img</code> va cherhcer directement l'image appelée, si les attributes de hauteur et de largeur ne sont pas indiqués, l'image s'affiche à sa taille originale. Si on modifie, par exemple, la largeur, la hauteur se recalcul en homothétie (le rapport hauteur - largeur est respecté).
+                    </p>
+                    <p>
+                        <code class="balise">img</code> peut être appelé dans un paragraphe, 
+                        <img src="./images/drive-signal.png" alt="Portrait du Héroe du film drive, dans le style synthwave, dessiné numériquement par l'artiste James White, image téléchargée depuis son site signalnoise" class="left" /> mais elle déformera l'apparence du texte autour sauf si on lui donne une flottaison en CSS.
+                    </p>
+                    <p>
+                        Si la flottaison est utilisée, il ne faut pas oublier de "nettoyer" l'effet de bord de la flottaison afin que les éléments qui suivent l'image mais qui ne doivent pas appliquer l'effet de flottaison soient correctement placés.
+                    </p>
+                    <p class="clear">
+                        <code class="balise">picture</code> peut être préférée surtout au nivea de l'adaptatif.
+                    </p>
+                    <p>
+                        <code class="balise">picture</code> utilise un ensemble d'images, de tailles et de poids différents, qu'on va afficher selon des conditions prédéfinie dans la balise <code class="balise">source</code> à l'intérieur de <code class="balise">picture</code>
+                    </p>
+                    <picture>
+                        <source srcset="./images/doc-signal-394w.png" media="(min-width: 600px)" />
+                        <img src="./images/doc-signal-200w.png"  alt="Portrait du Docteur Emmet Brown, dans le style synthwave, de la série de films Retour vers le futur, dessiné numériquement par l'artiste James White, image téléchargée depuis son site signalnoise" />
+                    </picture>
+                    <p>
+                        A savoir que l'on peut utiliser une méthode similaire directement avec <code class="balise">img</code>.
+                    </p>
+                    <img 
+                        srcset="./images/james-white-composite-200w.png 200w, 
+                        ./images/james-white-composite-400w.png 400w,
+                        ./images/james-white-composite-800w.png 800w,
+                        ./images/james-white-composite.jpg 1200w"
+
+                        sizes="(max-width: 450px) 200px, (max-width: 850px) 400px, (max-width: 1250px) 800px, 1200px"
+
+                        src="./images/james-white-composite.jpg" />
                 </main>
                 <footer>
 
