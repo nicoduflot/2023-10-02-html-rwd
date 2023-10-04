@@ -1,0 +1,13 @@
+/* animation simple : au survol ou focus s'il existe d'un élément */
+
+/* créer la classe appliquée à l'élément qui prépare l'élément à une animation */
+
+.translation{
+    transition: box-shadow 2s, transform 2s;
+}
+
+.translation:hover{
+    box-shadow: 5px 5px black;
+    transform: translate(10px, -10px);
+    border: 3px dashed darkgreen;
+}
