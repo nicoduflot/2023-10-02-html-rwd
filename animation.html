@@ -54,11 +54,38 @@
                         Des bibliothèques d'animation sont disponible sur internet, il suffit la plupart du temps de récupérer un css, l'ajouter à la page et utiliser les classes proposée, évidement selon un ordre précis.
                     </p>
                     <h2>Les animation "DIY"</h2>
+                    <h3>Les transitions</h3>
                     <p class="translation">
                         Le principe des animations CSS sont, par exemple, de préparer l'élément à l'animation avec une transition, on programme la ou les animations et / ou transformations dans cette transition.
                     </p>
-                    <p>
+                    <p class="scale-up">
                         Ensuite, sur le pseudo sélecteur (par exemple au survol :hover) décrire le contenu des transition et / ou transformations.
+                    </p>
+                    <p>
+                        on utilise soit la propriété raccourcie transition, qui peut être décomposée par :
+                    </p>
+                    <ul>
+                        <li>transition-property: la propriété CSS subissant la transition</li>
+                        <li>transition-duration: la durée de la transition en seconde</li>
+                        <li>transition-timing-function: la façon dont la transition se fait (le "mouvement" à l'écran)</li>
+                        <li>transition-delay: le délais d'attente avant le lancement de la transition</li>
+                    </ul>
+                    <p class="code">
+                        <code>
+                            .scale-up{<br />
+                            &nbsp;&nbsp;transition-property: transform;<br />
+                            &nbsp;&nbsp;transition-duration: 0.5s;<br />
+                            &nbsp;&nbsp;transition-timing-function: ease;<br />
+                            &nbsp;&nbsp;transition-delay: 0.2s;<br />
+                            &nbsp;&nbsp;<span class="code-comment">/*<br />
+                            &nbsp;&nbsp;transition: transform 0.5s ease 0.2s;<br />
+                            &nbsp;&nbsp;*/</span><br />
+                            }<br />
+                            <br />
+                            .scale-up:hover{<br />
+                            &nbsp;&nbsp;transform: scale(1.2);<br />
+                            }<br />
+                        </code>
                     </p>
                     <h3>Mini exo - animer les cellule du tableau</h3>
                     <p>
@@ -109,7 +136,74 @@
                             </tr>
                         </tbody>
                     </table>
-                    
+                    <h3>Animation utilisant des images clefs</h3>
+                    <p>
+                        Comme pour les dessin animés, l'animateur principal va définir des images clefs d'un story board, le navigateur va faire office d'intervaliste et créer les images intermédiaires entre les images clefs.
+                    </p>
+                    <p class="code">
+                        <code>
+                            .espace-animation{<br />
+                            &nbsp;&nbsp;width: 100%;<br />
+                            &nbsp;&nbsp;position: relative;<br />
+                            &nbsp;&nbsp;padding-bottom: 30%;<br />
+                            &nbsp;&nbsp;background-color: var(--site-third-color-25);<br />
+                            }<br />
+                            <br />
+                            .cercle-animation{<br />
+                            &nbsp;&nbsp;position: absolute;<br />
+                            &nbsp;&nbsp;width: 100px;<br />
+                            &nbsp;&nbsp;height: 100px;<br />
+                            &nbsp;&nbsp;background-color: orange;<br />
+                            &nbsp;&nbsp;border-radius: 50%;<br />
+                            &nbsp;&nbsp;font-size: 80px;<br />
+                            &nbsp;&nbsp;display: flex;<br />
+                            &nbsp;&nbsp;justify-content: center;<br />
+                            &nbsp;&nbsp;align-items: center;<br />
+                            &nbsp;&nbsp;border: 3px solid var(--site-color);<br />
+                            }<br />
+                            <br />
+                            .animation{<br />
+                            <span class="code-comment">&nbsp;&nbsp;/* on décrit l'animation */
+                            &nbsp;&nbsp;<br />
+                            &nbsp;&nbsp;/* 
+                            &nbsp;&nbsp;<br />
+                            &nbsp;&nbsp;animation est une prépriété raccourcie, qui se compose de  <br />
+                            &nbsp;&nbsp;<br />
+                            &nbsp;&nbsp;animation-name              : nom de l'animation<br />
+                            &nbsp;&nbsp;animation-duration          : durée de l'animation<br />
+                            &nbsp;&nbsp;animation-timing-function   : la vitesse constante ou non de l'animation<br />
+                            &nbsp;&nbsp;animation-delay             : le délai avant le début de l'animation<br />
+                            &nbsp;&nbsp;animation-iteration-count   : le nombre de fois que l'animation se joue<br />
+                            &nbsp;&nbsp;animation-direction         : le "sens" de l'animation (par exemple commencer au début ou à l'envers<br />
+                            &nbsp;&nbsp;*/<br /></span>
+                            &nbsp;&nbsp;animation-name: fleche-qui-bouge;<br />
+                            &nbsp;&nbsp;animation-duration: 3s;<br />
+                            &nbsp;&nbsp;animation-iteration-count: infinite;<br />
+                            }<br />
+                        </code>
+                    </p>
+                    <div class="espace-animation">
+                        <div class="cercle-animation animation">
+                            <i class="bi bi-arrow-right-circle-fill"></i>
+                        </div>
+                    </div>
+                    <div class="cadre">
+                        <div class="chargement">
+                            <div class="charge-01"></div>
+                        </div>
+                        <div class="chargement">
+                            <div class="charge-02"></div>
+                        </div>
+                        <div class="chargement">
+                            <div class="charge-03"></div>
+                        </div>
+                        <div class="chargement">
+                            <div class="charge-04"></div>
+                        </div>
+                    </div>
+                    <p>
+                        Appelez-nous : <i class="bi bi-telephone-fill clignotant"></i>
+                    </p>
                 </main>
                 <footer>
                     <a href="./article.html"><button>Lire +</button></a>
