@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="65.999992mm"
+   height="66mm"
+   viewBox="0 0 65.999993 66"
+   version="1.1"
+   id="svg1214"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="croissant.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1216"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.74029882"
+     inkscape:cx="139.80841"
+     inkscape:cy="306.63293"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-1928"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1211" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-68.048594,-67.609026)">
+    <path
+       id="path1503"
+       style="fill:#800000;stroke-width:0.263837;stroke-miterlimit:2;paint-order:stroke markers fill;stop-color:#000000"
+       d="m 78.385559,73.393093 a 35.29217,35.273665 0 0 0 -3.64e-4,49.884387 35.29217,35.273665 0 0 0 49.910925,0 35.29217,35.273665 0 0 0 5.75247,-7.60365 35.29217,35.273665 0 0 1 -42.303276,-5.74947 35.29217,35.273665 0 0 1 -5.732066,-42.315334 35.29217,35.273665 0 0 0 -7.627689,5.784067 z" />
+  </g>
+</svg>

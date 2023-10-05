@@ -1,0 +1,139 @@
+@import url('./pixel-art-css-animated.css');
+
+.badge{
+    width: 200px;
+    height: 200px;
+    /*
+    background est une propriété raccourcie
+    background-color, background-size, background-repeat, background-position, background-image, etc.
+    */
+    background: url('../images/pip-boy-boy.png'), radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    background-color: brown;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: cadetblue;
+    box-shadow: 2px 2px 5px 1px;
+}
+
+.vignette{
+    width: 52px;
+    height: 52px;
+    border: 1px solid var(--site-color);
+    margin: 0.5rem;
+    background-image: url('../images/multi-vignettes-sm-01.png');
+    border-radius: 50%;
+}
+
+.vignette-01{
+    background-position-x: 0;
+    background-position-y: 0;
+}
+
+.vignette-02{
+    background-position-x: 50px;
+    background-position-y: 0;
+}
+
+.vignette-03{
+    background-position-x: 0;
+    background-position-y: 50px;
+}
+
+.vignette-04{
+    background-position-x: 50px;
+    background-position-y: 50px;
+}
+
+.triangle-rouge{
+    --hauteur-triangle: 2rem;
+    --h-b-t: calc( var(--hauteur-triangle) / 2 );
+    --h-b-b: calc( var(--hauteur-triangle) / 2 );
+    --l-b-c: calc( var(--hauteur-triangle) * 0.86 );
+    height: 0;
+    width: 0;
+    border: var(--h-b-t) solid transparent;
+    border-right-width: 0;
+    border-left-width: var(--l-b-c);
+    border-left-color: darkred;
+}
+
+p.p-intro::before{
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    --taille-base: 1rem;
+    border-color: transparent;
+    border-style: solid;
+    border-left-width: calc( var(--taille-base) * 0.86 );
+    border-top-width: calc( var(--taille-base) / 2 );
+    border-bottom-width: calc( var(--taille-base) / 2 );
+    border-left-color: var(--site-links);
+}
+
+.text-box-shadow{
+    width: 200px;
+    height: 200px;
+    color: white;
+    background-color: black;
+    margin: 3rem;
+    box-shadow: 0 0 0 10px darkred, 0 0 0 20px darkblue, inset 0 0 0 10px darkgreen, inset 0 0 0 20px darkmagenta;
+    border: 10px solid gold;
+}
+
+.atari{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 200px;
+    color: white;
+    text-transform: uppercase;
+    background-color: black;
+    margin: 3rem;
+    box-shadow: -10px 0 0 gold, -20px 0 darkred, -30px 0 0 orange;
+    border-left: 10px solid darkgreen;
+    border-top-left-radius: 50px;
+}
+
+.ecusson{
+    position: relative;
+    width: 338px;
+    height: 338px;
+}
+
+.fg, .mg, .bg{
+    position: absolute;
+}
+
+.fg{
+    z-index: 2;
+}
+
+.mg{
+    z-index: 1;
+}
+
+.bg{
+    z-index: 0;
+}
+
+.text-fg{
+    position: absolute;
+    font-size: 6rem;
+    z-index: 3;
+    width: 338px;
+    height: 338px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Alice_in_Wonderland_3';
+    color: white;
+    text-shadow: 0 0 10px darkblue;
+}
