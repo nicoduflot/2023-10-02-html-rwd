@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formation HTML5 - CSS3 - RWD</title>
+        <meta name="description" content="Le site - projet pour la formation HTML5 - CSS3 - RWD semaine 40 - Oct - 2023" />
+        <!--
+            Dans le Head, c'est aussi là où l'on appelle les fichier CSS et aussi les fichiers de script JS
+        -->
+        <link rel="stylesheet" href="./css/bootstrap-icons.css" />
+        <link rel="stylesheet" href="./css/grid.css" />        
+    </head>
+<body>
+    <header>
+        <h1>Formation HTML5 - CSS3 - RWD</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="./" target="_self" title="Lien vers l'accueil du site">Accueil</a></li>
+            <li>
+                <a href="./article.html" target="_self" title="Lien vers la page article">Article</a></li>
+            <li>
+                <a href="./contact.html" target="_self" title="Lien vers le formulaire de contact">Contact</a></li>
+            <li><a href="./media.html" target="_self" title="Lien vers la page media">Media</a></li>
+            <li>
+                <a href="./animation.html" target="_self" title="Lien vers les animation en CSS">Animation</a></li>
+            <li>
+                <a href="./trucs.html" target="_self" title="Lien vers la page des trucs CSS utiles">Trucs CSS</a></li>
+            <li>
+                <a href="./grid.html" target="_self" title="Lien vers la page des grilles CSS">Grille CSS</a></li>
+            <li>
+                <a href="./bootstrap.html" target="_self" title="Lien vers une page utilisant Bootstrap">Bootstrap</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <article>
+                <header>
+                    <h2>Les grilles CSS avec grid</h2>
+                </header>
+                <main>
+                    <h3>La base des grilles</h3>
+                    <p>
+                        La propriété <code>grid</code> permet de transformer l'élément qui la possède en une grille.
+                    </p>
+                    <p>
+                        Il faut ensuite définir le comportement de la grille : 
+                    </p>
+                    <ul>
+                        <li>Le modèle des colonnes</li>
+                        <li>Les espaces (goutières) entre les éléments de la grille</li>
+                        <li>La hauteur minimale, maximale ou automatique des lignes</li>
+                        <li>
+                            <a href="https://developer.mozilla.org/fr/docs/Web/CSS/grid" target="_blank">
+                                Plus d'information sur la définition des grilles.
+                            </a>
+                        </li>
+                    </ul>
+                    <p>
+                        On applique le display grid à <code class="balise">body</code>. on enlève les marge de body (comme sur un reset css). Ensuite, avec <code>grid-template-columns</code> on indique le nombre de fractions horizontales appliqué à <code class="balise">body</code>, ici, une seule fraction (1fr => une colonne). Enfin, une goutière (gap) de 0.5rem entre les éléments de la grille.
+                    </p>
+                    <p class="code">
+                        body{<br />
+                        &nbsp;&nbsp;display: grid;<br />
+                        &nbsp;&nbsp;margin: 0;<br />
+                        &nbsp;&nbsp;grid-template-columns: 1fr;<br />
+                        &nbsp;&nbsp;gap: 0.5rem;<br />
+                        }
+                    </p>
+                    <p>
+                        Une fois que cela est défini, chaque élément enfant direct de body s'affichera sur une colonne.
+                    </p>
+                    <h3>Changer la disposition de la grille</h3>
+                    <p>
+                        À l'aide des media queries, je change la prpriété <code>grid-template-columns</code>. Ici, on crée 4 fraction (1fr + 3fr => 4 fractions) et on indique que le <code class="balise">header</code> et <code class="balise">footer</code> enfant direct de body prennent les deux colonnes, donc la <code class="balise">nav</code> et le <code class="balise">main</code> feront 1/4 de l'espace de <code class="balise">body</code> pour <code class="balise">nav</code> et 3/4 de l'espace de <code class="balise">body</code> pour <code class="balise">main</code>
+                    </p>
+                    <p class="code">
+                        @media screen and (min-width:768px) {<br />
+                        &nbsp;&nbsp;body{<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;grid-template-columns: 1fr 3fr;<br />
+                        &nbsp;&nbsp;}<br />
+                        &nbsp;&nbsp;body > header, <br />
+                        &nbsp;&nbsp;body > footer{<br />
+                        &nbsp;&nbsp;&nbsp;grid-column: span 2;<br />
+                        &nbsp;&nbsp;}<br />
+                        }<br />
+                    </p>
+                    <p>
+                        Voir un exemple de grille. <a href="./grid-neo.html">Grid Neo</a>.
+                    </p>
+                </main>
+                <footer>
+                    <a href="./article.html"><button>Lire +</button></a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2 id="balises-contenu">HTML : Les balises de contenu texte</h2>
+                </header>
+                <main>
+                    <!-- 
+                        une liste des caractères spéciaux en HTML
+                        https://www.leptidigital.fr/productivite/caracteres-speciaux-html-2-19297/
+                     -->
+                    <p>
+                        <b>Le texte doit toujours être compris dans des balises de contenu de type paragraphe</b>, comme des bloc de citation, du texte préformaté, etc.<br />
+                        La balise <code>&lt;br&gt;</code> permet de mettre un retour chariot au sein d'un paragraphe.
+                    </p>
+                    <hr />
+                    <p>
+                        <strong>la plupart des balises de contenu texte sont en affichage <code>display: block</code></strong>, c'est à dire qu'elles prennent tout l'espace disponible en largeur, et celles qui sont <code>display: inline</code> "entourent" le contenu texte, certaines peuvent par exemple servir a appliquer un CSS particulier à ce texte, comme les balises <code>&lt;code&gt;</code>, <code>&lt;span&gt;</code> ou avoir un fonctionnement comme la balise <code>&lt;a&gt;</code>.
+                    </p>
+                    <p>
+                        Attention, pour par exemple mettre du texte en gras ou en italique, il existe plusieurs balises comme <code>&lt;b&gt;</code>, <code>&lt;strong&gt;</code> pour le gras, <code>&lt;i&gt;</code> ou <code>&lt;em&gt;</code> pour l'italique.
+                    </p>
+                    <p>
+                        Si on utilise <code>&lt;strong&gt;</code>, on donne en plus d'une important visuelle au contenu une importance au niveau de la sémantique donc du référencement, alors que <code>&lt;b&gt;</code> ne donne qu'une importantce visuelle.
+                    </p>
+                    <p>
+                        La même chose pour la balise <code>&lt;em&gt;</code>, qui <em>donne en plus de l'italique, une emphase au texte</em>, alors que la balise <code>&lt;i&gt;</code> ne fait que mettre le texte en <i>italique</i>.
+                    </p>
+                    <p>
+                        Certains systèmes d'icônes fournis sur internet utilisent la balise i comme support pour afficher leurs icônes. 
+                        <i class="bi bi-card-text"></i>
+                    </p>
+                    <blockquote>
+                        <q>Tu quoque filis ?</q><br />
+                        <cite>Jules César</cite>
+                    </blockquote>
+                    <p>
+                        <q>I'm Batman</q>, <cite>Batman</cite>.
+                    </p>
+                    <pre>Lorem ipsum dolor sit 
+amet consectetur adipisicing elit. 
+Facere nemo consequatur, temporibus 
+quaerat quis tempore odit est incidunt 
+aperiam laborum recusandae 
+aspernatur explicabo non quas. 
+Vel autem earum assumenda incidunt.</pre>
+<pre>
+&lt;body&gt;
+&lt;h1&gt;
+    Mon titre
+&lt;/h1&gt;
+&lt;/body&gt;
+</pre>
+                </main>
+                <footer>
+                    <a href="./article.html"><button>Lire +</button></a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2 id="problemes-en-css">Problèmes courants en CSS</h2>
+                </header>
+                <main>
+                    <p>
+                        Les tailles des éléments sont définis par défaut sur le contenu des éléments, c'est à dir que si je définie une div de 200px de large, avec une marge intérieure de 10px et une bordure de 1px
+                        de large, la place totale de l'élément sur l'écran sera de :
+                        200px + 10px + 10px + 1px + 1px (contenu + marge intérieur gauche + marge intérieur droite +
+                        largeur bordure à gauche + largeur bordure à droite ) => 222px.<br />
+                        c'est la propriété css box-sizing qui est à 'content-box' par défaut.<br />
+                        Pour éviter cela, on appliquera 'border-box' à tous les éléments grace au caractère spécial *
+                        dans la déclaration CSS.
+                    </p>
+                    <pre>
+                        <code>
+*, *::before, *::after{
+box-sizing: border-box;
+}
+                        </code>
+                    </pre>
+                    <div class="content-width">
+                        Content box: <br />
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut accusantium, dolores.
+                    </div>
+                    <div class="border-width">
+                        Border box: <br />
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut accusantium, dolores.
+                    </div>
+                    <h3>EM vs REM</h3>
+                    <div class="deux-em">
+                        Coucou
+                        <div class="deux-em">
+                            Coucou
+                        </div>
+                    </div>
+                    <div class="deux-rem">
+                        Coucou
+                        <div class="deux-rem">
+                            Coucou
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <a href="./article.html"><button>Lire +</button></a>
+                </footer>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div>
+            &copy; DAWAN Oct - 2023
+        </div>
+        <div class="grid-2-c">
+            <div>
+                <h4>Liens utiles</h4>
+                <ul>
+                    <li><a href="./cgu.html" title="Lien vers les conditions générales d'utilisation">CGU</a></li>
+                    <li><a href="#" title="Sitemap du site">Sitemap</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Partenaires</h4>
+                <ul>
+                    <li><a href="#" title="lien 01">lien 01</a></li>
+                    <li><a href="#" title="lien 02">lien 02</a></li>
+                    <li><a href="#" title="lien 03">lien 03</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
