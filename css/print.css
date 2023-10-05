@@ -1,0 +1,48 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+img, video{
+    max-width: 100%;
+}
+body > nav,
+article footer,
+body > footer{
+    display: none;
+}
+
+.site-title{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+body > header,
+body > main{
+    width: 19cm;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main > section{
+    border-bottom: 1px solid black;
+}
+
+section.table-matieres{
+    width: 5cm;
+    float: left;
+    border: 1px solid black;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+a, a:visited{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}

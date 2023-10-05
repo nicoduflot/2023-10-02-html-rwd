@@ -209,6 +209,15 @@ form p.form-action{
     height: 1rem;
 }
 
+/* 
+pour rendre une image à l'affichage fluide, c'est à dire que sa taille ne dépasse pas l'affichage à l'écran 
+Il faut jouer sur l'affichage maximal de, par exemple, sa largeur
+*/
+
+img, video{
+    max-width: 100%;
+}
+
 /* déclarations des classes */
 
 .rouge-gras{
@@ -322,6 +331,44 @@ form p.form-action{
     padding-right: 1rem;
 }
 
+/* quelques classes pour le RWD du contenu embarqué (exemple les iframes de streaming) */
+
+.ratio{
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 0;
+}
+
+.ratio > *{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ratio-4x3{
+    padding-bottom: calc(3 / 4 * 100%);
+}
+
+.ratio-16x9{
+    padding-bottom: calc(9 / 16 * 100%);
+}
+
+.ratio-21x9{
+    padding-bottom: calc(9 / 21 * 100%);
+}
+
+.ratio-a4-portrait{
+    padding-bottom: calc(29.7 / 21 * 100%);
+}
+
+.ratio-a4-paysage{
+    padding-bottom: calc(21 / 29.7 * 100%);
+}
+
+
 /* déclarations de structure */
 
 body{
@@ -362,6 +409,13 @@ body > nav a:visited{
     }
 }
 
+body > nav > ul,
+body > main{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* &:hover, &:focus remplace la déclaration suivante : */
 /*
 body > nav a:hover,
@@ -378,4 +432,71 @@ article h1{
 article footer,
 .clear{
     clear: both;
+}
+
+/*
+Les media queries : il est possilble de surcharger des déclaration CSS existantes selon des conditions d'affichage (écran, impression, portrait, paysage, etc) en utilisant @media
+*/
+
+/*
+Pour faire de l'adaptatif smartphone first, on a créer entre 95 et 98% du CSS pour afficher le site correctement sur un smartphone,
+avec les media queries, on va définir des points de rupture (breakpoint) qui seront utilisés pour créer des espace CSS de surcharge 
+selon les paramètre des media queries
+*/
+/*
+@media print {
+  ... permet de laisser le css en media="all" et de ne créer que les règle pour l'inpression, en revanche, si des polices, des placement, etc doivent être réécris, tout sera à cet endroi => taille du fichier difficile a maintenir et à lire  
+}
+*/
+
+@media screen and (min-width:576px) {
+    body > nav > ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    body > nav li:not(body > nav li:last-child){
+        border-bottom: unset;
+    }
+
+    body > nav > ul,
+    body > main{
+        width: 540px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    body > nav > ul,
+    body > main{
+        width: 720px;
+    }
+}
+
+@media screen and (min-width:992px) {
+    body > nav > ul,
+    body > main{
+        width: 960px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    body > nav > ul,
+    body > main{
+        width: 1140px;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    body > nav > ul,
+    body > main{
+        width: 1320px;
+    }
+}
+
+@media screen and (min-width:1600px) {
+    body > nav > ul,
+    body > main{
+        width: 1560px;
+    }
 }

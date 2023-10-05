@@ -10,7 +10,8 @@
             Dans le Head, c'est aussi là où l'on appelle les fichier CSS et aussi les fichiers de script JS
         -->
     <link rel="stylesheet" href="./css/bootstrap-icons.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/print.css" media="print" />
 </head>
 
 <body>
@@ -183,16 +184,21 @@
                     <p>
                         Youtube impose un format dans l'iframe, il faudra modifier le CSS voir créer un élément enveloppeur afin de rendre l'iframe adaptative
                     </p>
+                    <!-- 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/rrT6v5sOwJg?si=Y2hpSkf4PmUbk4re" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    -->
+                    <figure class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/rrT6v5sOwJg?si=Y2hpSkf4PmUbk4re" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </figure>
                     <h4>
                         Dailymotion
                     </h4>
                     <p>
                         Daily motion apporte une solution adaptative inclue, avec un élément conteneur et une iframe appliquant du style CSS enbalise afin d'assurer l'adaptabilité à la largeur de l'affichage (device-width)
                     </p>
-                    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-                        <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/xr5ef" width="100%" height="100%" allowfullscreen title="Dailymotion Video Player" ></iframe>
-                    </div>
+                    <figure class="ratio ratio-16x9">
+                        <iframe frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/xr5ef" width="100%" height="100%" allowfullscreen title="Dailymotion Video Player" ></iframe>
+                    </figure>
                 </main>
                 <footer>
                     <a href="./article.html"><button>Lire +</button></a>
@@ -228,7 +234,12 @@
                             <a href="./article.html" target="_top">Ouvrir la page article dans le cadre le plus haut (remplace la page actuelle du navigateur quelque soit la profondeur ou le nombre d'iframe encapsulées) </a>
                         </li>
                     </ul>
-                    <iframe width="100%" height="300px" src="./documents/fichier.txt" name="target-iframe"></iframe>
+                    <div class="ratio ratio-a4-portrait">
+                        <iframe src="./documents/fichier.txt" name="target-iframe"></iframe>
+                    </div>
+                    <div class="ratio ratio-a4-paysage">
+                        <iframe src="./documents/PP3.pdf"></iframe>
+                    </div>
                 </main>
                 <footer>
                     <a href="./article.html"><button>Lire +</button></a>
