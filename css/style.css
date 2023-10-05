@@ -122,7 +122,8 @@ a:focus{
     color: var(--site-links-alt);
 }
 
-article, aside{
+/*article, aside*/
+body > main > section > *{
     padding: 1rem 0.5rem;
     /* padding: 1rem 0.5rem 1rem 0.5rem; */
     /*
@@ -478,6 +479,21 @@ selon les paramètre des media queries
     body > main{
         width: 960px;
     }
+
+    body > main > section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > main > section > *{
+        width: 50%;
+    }
+
+    body > main > section > *:nth-child(2n + 1):last-child{
+        width: 100%;
+    }
+
+
 }
 
 @media screen and (min-width:1200px) {
@@ -485,6 +501,21 @@ selon les paramètre des media queries
     body > main{
         width: 1140px;
     }
+
+    body > main > section > *,
+    body > main > section > *:nth-child(2n + 1):last-child
+    {
+        width: 33%;
+    }
+
+    body > main > section > *:nth-child(3n + 1):last-child{
+        width: 100%;
+    }
+    
+    body > main > section > *:nth-child(3n + 2):last-child{
+        width: 66%;
+    }
+
 }
 
 @media screen and (min-width:1400px) {
@@ -498,5 +529,23 @@ selon les paramètre des media queries
     body > nav > ul,
     body > main{
         width: 1560px;
+    }
+
+    body > main > section > *,
+    body > main > section > *:nth-child(3n + 1):last-child,
+    body > main > section > *:nth-child(3n + 2):last-child{
+        width: 25%;
+    }
+
+    body > main > section > *:nth-child(4n + 1):last-child{
+        width: 100%;
+    }
+    
+    body > main > section > *:nth-child(4n + 2):last-child{
+        width: 75%;
+    }
+    
+    body > main > section > *:nth-child(4n + 3):last-child{
+        width: 50%;
     }
 }
