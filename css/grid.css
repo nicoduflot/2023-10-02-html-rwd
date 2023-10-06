@@ -28,6 +28,7 @@
     --site-nav-color: var(--site-bg-color);
     --green-code-comment: darkgreen;
     --code-bg-color: rgb(242, 241, 241);
+    scroll-behavior: smooth;
 }
 
 /* déclarations générales */

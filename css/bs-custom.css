@@ -1,0 +1,9 @@
+.table-matieres a,
+.table-matieres a:visited{
+    text-decoration: none;
+}
+
+.footer a,
+.footer a:visited{
+    text-decoration: none;
+}
