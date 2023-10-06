@@ -7,3 +7,16 @@
 .footer a:visited{
     text-decoration: none;
 }
+
+.bg-dark-50{
+    background-color: rgba(33, 37, 41, 0.5);
+}
+
+.ratio-a4-portrait{
+    --bs-aspect-ratio: calc(29.7 / 21 * 100%);
+}
+
+.carousel figure > *{
+    margin-left: auto;
+    margin-right: auto;
+}

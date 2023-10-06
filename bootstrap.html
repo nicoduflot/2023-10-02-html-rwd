@@ -16,6 +16,9 @@
 </head>
 
 <body>
+    <header class="bg-dark text-white text-center">
+        <h1 class="m-0">Formation HTML5 - CSS3 - RWD</h1>
+    </header>
     <nav class="navbar bg-dark navbar-expand-md" data-bs-theme="dark">
         <div class="container">
             <a class="navbar-brand" href="./bootstrap.html">
@@ -31,7 +34,7 @@
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
                 </form>
             </div>
         </div>
@@ -61,9 +64,15 @@
                         <a class="nav-link" href="./trucs.html" target="_self"
                             title="Lien vers la page des trucs CSS utiles">Trucs CSS</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./grid.html" target="_self"
-                            title="Lien vers la page des grilles CSS">Grille CSS</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            CSS Grid
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./grid.html">Grille CSS</a></li>
+                            <li><a class="dropdown-item" href="./grid-neo.html">Exemple grille CSS</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="./bootstrap.html" target="_self"
@@ -245,11 +254,69 @@ box-sizing: border-box;
                 </footer>
             </article>
             <div class="my-1 col-md-6 col-lg-6">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ut voluptas ab et tempore odio illo,
-                    dolorem impedit sapiente veniam recusandae perferendis quidem, culpa fugiat. Dicta nesciunt magni
-                    quasi officiis?
-                </p>
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner ratio ratio-a4-portrait bg-dark">
+                        <figure class="carousel-item active">
+                            <img src="./images/doc-signal-394w.png" class="d-block img-fluid" alt="...">
+                            <figcaption class="carousel-caption d-none d-md-block bg-dark-50">
+                                <h5>Doc Emmet Brown</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="carousel-item">
+                            <img src="./images/dolf-signal.png" class="d-block img-fluid" alt="...">
+                            <figcaption class="carousel-caption d-none d-md-block bg-dark-50">
+                                <h5>Dolph Lundgren</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="carousel-item">
+                            <img src="./images/james-white-composite-400w.png" class="d-block img-fluid" alt="...">
+                            <figcaption class="carousel-caption d-none d-md-block bg-dark-50">
+                                <h5>James White art</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="carousel-item">
+                            <img src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" class="d-block img-fluid"
+                                alt="...">
+                            <figcaption class="carousel-caption d-none d-md-block bg-dark-50">
+                                <h5>Fallout 4 wallpaper</h5>
+                                <p>Some representative placeholder content for the fourth slide.</p>
+                            </figcaption>
+                        </figure>
+                        </figure>
+                        <figure class="carousel-item">
+                            <img src="./images/SheRa-Netflix-2--673x1024.jpg" class="d-block img-fluid" alt="...">
+                            <figcaption class="carousel-caption d-none d-md-block bg-dark-50">
+                                <h5>Série Shera sur Netflix</h5>
+                                <p>Some representative placeholder content for the fourth slide.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <button class="carousel-control-prev bg-dark" type="button"
+                        data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next bg-dark" type="button"
+                        data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
             <article class="my-1 col-md-6 col-lg-6 col-xl-3">
                 <div class="card">
@@ -278,35 +345,71 @@ box-sizing: border-box;
                 </p>
             </div>
             <div class="my-1 col-md-6 col-lg-6 offset-xl-3">
-                <ul class="nav nav-tabs">
+                <ul class="nav nav-tabs" id="ex-nav-tab">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Active</a>
+                        <a class="nav-link active" aria-current="page" href="#" data-cb-target="#info">Info</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#" data-cb-target="#image">Image</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#" data-cb-target="#description">Description</a>
                     </li>
                 </ul>
-                <div id="info">
+                <div class="tab-content" id="info">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ut voluptas ab et tempore odio illo,
-                        dolorem impedit sapiente veniam recusandae perferendis quidem, culpa fugiat. Dicta nesciunt magni
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ut voluptas ab et tempore odio
+                        illo,
+                        dolorem impedit sapiente veniam recusandae perferendis quidem, culpa fugiat. Dicta nesciunt
+                        magni
                         quasi officiis?
                     </p>
                 </div>
-                <div id="image">
+                <div class="tab-content" id="image" style="display: none;">
                     <img class="img-fluid" src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg">
                 </div>
-                <div id="description">
+                <div class="tab-content" id="description" style="display: none;">
                     <dl class="row">
-                        <dt class="col-sm-3">transition-property:</dt><dd class="col-sm-9">la propriété CSS subissant la transition</dd>
-                        <dt class="col-sm-3">transition-duration:</dt><dd class="col-sm-9"> la durée de la transition en seconde</dt>
-                        <dt class="col-sm-3">transition-timing-function:</dt><dd class="col-sm-9"> la façon dont la transition se fait (le "mouvement" à l'écran)</dt>
-                        <dt class="col-sm-3">transition-delay:</dt><dd class="col-sm-9"> le délais d'attente avant le lancement de la transition</dt>
+                        <dt class="col-sm-3">transition-property:</dt>
+                        <dd class="col-sm-9">la propriété CSS subissant la transition</dd>
+                        <dt class="col-sm-3">transition-duration:</dt>
+                        <dd class="col-sm-9"> la durée de la transition en seconde</dt>
+                        <dt class="col-sm-3">transition-timing-function:</dt>
+                        <dd class="col-sm-9"> la façon dont la transition se fait (le "mouvement" à l'écran)</dt>
+                        <dt class="col-sm-3">transition-delay:</dt>
+                        <dd class="col-sm-9"> le délais d'attente avant le lancement de la transition</dt>
                     </dl>
                 </div>
+                <script>
+                    /* récupérer tous les éléments liens de la navigation par onglet */
+                    let allTabs = document.querySelectorAll('#ex-nav-tab li a');
+                    /* récupérer tous les éléments contenu lié aux liens de la navigation par onglet */
+                    let allTabContent = document.querySelectorAll('.tab-content');
+                    /* parcourir les liens */
+                    allTabs.forEach(function (tab) {
+                        /* abonner chaque lien à un écouteur d'évènement sur le clic */
+                        tab.addEventListener('click', function (evenement) {
+                            /* on récupère l'évènement clic et on annule le comportement "naturel" d'un clicl sur un lien */
+                            evenement.preventDefault();
+                            /* on ajoute le display none aux contenu de tab */
+                            allTabContent.forEach(function (content) {
+                                content.style.setProperty('display', 'none');
+                            });
+                            /* on met a div ciblée par data-cd-target du llien cliqué en display block */
+                            document.querySelector(tab.dataset.cbTarget).style.setProperty('display', 'block');
+
+                            /* on parcours à nouveau tous les éléments lien */
+                            allTabs.forEach(function (element) {
+                                /* on retire la classe active de tous les liens */
+                                element.classList.remove('active');
+                                element.removeAttribute('aria-current');
+                            });
+                            /* on ajoute la classe active au lien cliqué */
+                            tab.classList.add('active');
+                            tab.setAttribute('aria-current', 'page');
+                        });
+                    });
+                </script>
             </div>
         </section>
     </main>
