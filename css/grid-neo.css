@@ -58,26 +58,32 @@ a, a:visited{
 
 @media (min-width: 576px){
     .grid-wrapper{
-        grid-template-columns: repeat( 3, calc( calc( 100% - 2.1rem ) / 3 )  );
+        /*grid-template-columns: repeat( 3, calc( calc( 100% - 2.1rem ) / 3 )  );*/
+        grid-template-columns: 1fr 1fr 1fr;
     }
-
+    
     .grid-wrapper-header{
-        grid-template-columns: repeat( 2, calc( calc( 100% - 0.9rem ) / 2 )  );
+        /* grid-template-columns: repeat( 2, calc( calc( 100% - 0.9rem ) / 2 )  ); */
+        grid-template-columns: 1fr 1fr;
+
     }
 }
 
 @media (min-width: 768px){
-    .un{
-        grid-column: 1 / 2;
-    }
+    
 
     .deux{
-        grid-column: 2 / 4;
+        /*grid-column: 2 / 4;*/
+        grid-column: span 2;
     }
 
     .quatre{
+        /*
         grid-column: 1 / 3;
         grid-row: 3 / 5;
+        */
+        grid-column: span 2;
+        grid-row: span 2;
     }
 
     .trois{
@@ -85,57 +91,57 @@ a, a:visited{
     }
 
     .huit{
-        grid-column: 2 / 4;
-        grid-row: 5 / 6
+        grid-column: span 2;
     }
 
     .neuf{
-        grid-row: 6 / 8;
+        grid-row:span 2;
     }
 
     .dix_huit{
-        grid-column: 2 / 4;
+        grid-column: span 2;
     }
 }
 
 @media (min-width: 1200px){
     .grid-wrapper{
-        grid-template-columns: repeat( 4, calc( calc( 100% - 2.7rem ) / 4 )  );
+        /* grid-template-columns: repeat( 4, calc( calc( 100% - 2.7rem ) / 4 )  ); */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-auto-rows: minmax(200px, auto);
     }
 
     .un{
-        grid-column: 1 / 3;
+        grid-column: span 2;
     }
+
     .deux{
-        grid-column: 3 / 5;
+        grid-column: span 2;
     }
 
     .trois{
-        grid-column: 1 / 3;
+        grid-column: span 2;
     }
 
     .quatre{
-        grid-column: 3 / 5;
-        grid-row: 2 / 4;
+        grid-column: span 2;
+        grid-row: span 2;
     }
 
     .huit{
-        grid-column: 2 / 4;
-        grid-row: 4 / 6
+        grid-column: span 2;
+        grid-row: span 2;
     }
 
     .neuf{
-        grid-column: 4 / 5;
-        grid-row: 4 / 6;
+        grid-row: span 2;
     }
 
     .seize{
-        grid-column: 2 / 4;
+        grid-column: span 2;
     }
 
     .dix_huit{
-        grid-column: 1 / 5;
+        grid-column: span 4;
     }
 
 }

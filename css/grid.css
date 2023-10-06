@@ -37,9 +37,9 @@
 }
 
 body > header,
-body > nav,
+body > div.contenu > nav,
 body > footer,
-article{
+main > section > *{
     border: 1px solid var(--site-color);
     padding: 0.5rem;
 }
@@ -77,25 +77,20 @@ body{
     grid-template-columns: 1fr;
     grid-template-areas: 
     "header"
-    "nav"
-    "main"
+    "contenu"
     "footer";
     gap: 0.5rem;
 }
 
-header{
+body > header{
     grid-area: header;
 }
 
-nav{
-    grid-area: nav;
+.contenu{
+    grid-area: contenu;
 }
 
-main{
-    grid-area: main;
-}
-
-footer{
+body > footer{
     grid-area: footer;
 }
 
@@ -125,17 +120,35 @@ footer{
 }
 
 /* media queries */
-
 @media screen and (min-width:576px) {
+    .contenu{
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
 @media screen and (min-width:768px) {
-    body{
+    .contenu{
+        width: 720px;
+        display: grid;
         grid-template-areas: 
-        "header header"
         "nav main"
-        "footer footer";
+        ;
         grid-template-columns: 1fr 3fr;
+    }
+
+    body > div.contenu > nav{
+        grid-area: nav;
+    }
+
+    body > div.contenu > nav{
+        position: fixed;
+    }
+    
+    body > .contenu > main{
+        grid-area: main;
     }
     
     /*
@@ -157,13 +170,15 @@ footer{
 }
 
 @media screen and (min-width:992px) {
-    body{
+    .contenu{
+        width: 960px;
         grid-template-columns: 1fr 4fr;
     }
 }
 
 @media screen and (min-width:1200px) {
-    body{
+    .contenu{
+        width: 1140px;
         grid-template-columns: 1fr 5fr;
     }
 
@@ -176,16 +191,23 @@ footer{
     main > section > *{
         border: 1px solid var(--site-color);
     }
+
+    main > section > *:last-child:nth-child(2n + 1){
+        grid-column: span 2;
+    }
+
 }
 
 @media screen and (min-width:1400px) {
-    body{
+    .contenu{
+        width: 1320px;
         grid-template-columns: 1fr 6fr;
     }
 }
 
 @media screen and (min-width:1600px) {
-    body{
+    .contenu{
+        width: 1560px;
         grid-template-columns: 1fr 8fr;
     }
 }
