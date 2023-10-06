@@ -13,6 +13,35 @@
     <link rel="stylesheet" href="./css/bootstrap.css" />
     <script src="./js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="./css/bs-custom.css" />
+    <script type="text/javascript" src="./js/canvasjs.min.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('DOMContentLoaded', function(){
+            let chart = new CanvasJS.Chart("chartContainer", {
+                /* https://canvasjs.com */
+                title: {
+                    text: "Fruits sold in First Quarter"
+                },
+                data: [//array of dataSeries              
+                    { //dataSeries object
+
+                        /*** Change type "column" to "bar", "area", "line" or "pie"***/
+                        type: "pie",
+			showInLegend: true,
+			legendText: "{label}",
+                        dataPoints: [
+                            { label: "banana", y: 18 },
+                            { label: "orange", y: 29 },
+                            { label: "apple", y: 40 },
+                            { label: "mango", y: 34 },
+                            { label: "grape", y: 24 }
+                        ]
+                    }
+                ]
+            });
+
+            chart.render();
+        });
+    </script>
 </head>
 
 <body>
@@ -22,25 +51,12 @@
     <nav class="navbar bg-dark navbar-expand-md" data-bs-theme="dark">
         <div class="container">
             <a class="navbar-brand" href="./bootstrap.html">
-                <img src="./images/no-logo-white.svg" />
+                <img width="150px" src="./images/no-logo-white.svg" alt="logo no logo en svg" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavigation"
                 aria-controls="navbarNavigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavigation">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-secondary" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-    <nav class="navbar bg-dark navbar-expand-md" data-bs-theme="dark">
-        <div class="container">
             <div class="collapse navbar-collapse" id="navbarNavigation">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -271,21 +287,21 @@ box-sizing: border-box;
                         <figure class="carousel-item active">
                             <img src="./images/doc-signal-394w.png" class="d-block img-fluid" alt="...">
                             <figcaption class="carousel-caption d-none d-md-block bg-dark-50">
-                                <h5>Doc Emmet Brown</h5>
+                                <h4>Doc Emmet Brown</h4>
                                 <p>Some representative placeholder content for the first slide.</p>
                             </figcaption>
                         </figure>
                         <figure class="carousel-item">
                             <img src="./images/dolf-signal.png" class="d-block img-fluid" alt="...">
                             <figcaption class="carousel-caption d-none d-md-block bg-dark-50">
-                                <h5>Dolph Lundgren</h5>
+                                <h4>Dolph Lundgren</h4>
                                 <p>Some representative placeholder content for the second slide.</p>
                             </figcaption>
                         </figure>
                         <figure class="carousel-item">
                             <img src="./images/james-white-composite-400w.png" class="d-block img-fluid" alt="...">
                             <figcaption class="carousel-caption d-none d-md-block bg-dark-50">
-                                <h5>James White art</h5>
+                                <h4>James White art</h4>
                                 <p>Some representative placeholder content for the third slide.</p>
                             </figcaption>
                         </figure>
@@ -293,7 +309,7 @@ box-sizing: border-box;
                             <img src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" class="d-block img-fluid"
                                 alt="...">
                             <figcaption class="carousel-caption d-none d-md-block bg-dark-50">
-                                <h5>Fallout 4 wallpaper</h5>
+                                <h4>Fallout 4 wallpaper</h4>
                                 <p>Some representative placeholder content for the fourth slide.</p>
                             </figcaption>
                         </figure>
@@ -301,7 +317,7 @@ box-sizing: border-box;
                         <figure class="carousel-item">
                             <img src="./images/SheRa-Netflix-2--673x1024.jpg" class="d-block img-fluid" alt="...">
                             <figcaption class="carousel-caption d-none d-md-block bg-dark-50">
-                                <h5>Série Shera sur Netflix</h5>
+                                <h4>Série Shera sur Netflix</h4>
                                 <p>Some representative placeholder content for the fourth slide.</p>
                             </figcaption>
                         </figure>
@@ -338,11 +354,9 @@ box-sizing: border-box;
                 </div>
             </article>
             <div class="my-1 col-md-6 col-lg-6 col-xl-3">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ut voluptas ab et tempore odio illo,
-                    dolorem impedit sapiente veniam recusandae perferendis quidem, culpa fugiat. Dicta nesciunt magni
-                    quasi officiis?
-                </p>
+                <h2>Un graphique</h2>
+                <div id="chartContainer" style="height: 300px; width: 90%;">
+                </div>
             </div>
             <div class="my-1 col-md-6 col-lg-6 offset-xl-3">
                 <ul class="nav nav-tabs" id="ex-nav-tab">
@@ -420,7 +434,7 @@ box-sizing: border-box;
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h4>Liens utiles</h4>
+                    <h3>Liens utiles</h3>
                     <ul class="list-unstyled">
                         <li><a class="link-light" href="./cgu.html"
                                 title="Lien vers les conditions générales d'utilisation">CGU</a></li>
@@ -428,7 +442,7 @@ box-sizing: border-box;
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <h4>Partenaires</h4>
+                    <h3>Partenaires</h3>
                     <ul class="list-unstyled">
                         <li><a class="link-light" href="#" title="lien 01">lien 01</a></li>
                         <li><a class="link-light" href="#" title="lien 02">lien 02</a></li>
